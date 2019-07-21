@@ -10,16 +10,14 @@ import waits.WaitForElement;
 public class ShoppingCartPage {
 
     @FindBy(css = "a[href$='newOrderForm=']")
-    private WebElement proceedToCheckoutButton;
-
-    private WebDriver driver;
+    WebElement proceedToCheckoutButton;
 
     public ShoppingCartPage() {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
-    public void clickOnProceedToCheckout() {
-        WaitForElement.waitUntilElementIsClickable(proceedToCheckoutButton);
+    public CheckoutPage clickOnProceedToCheckout() {
         proceedToCheckoutButton.click();
+        return new CheckoutPage();
     }
 }

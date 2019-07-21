@@ -3,7 +3,6 @@ package page.objects;
 import driver.manager.DriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,16 +15,26 @@ public class TopMenuPage {
     @FindBy(css = "#MenuContent a[href*='signonForm']")
     private WebElement signOnLink;
 
-    private WebDriver driver;
+    @FindBy(css = "#Sidebar img[src*='fish']")
+    private WebElement fishCategoryLink;
 
     public TopMenuPage() {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
-    public void clickOnSignInLink(){
+    public LoginPage clickOnSignInLink(){
         WaitForElement.waitUntilElementIsClickable(signOnLink);
         signOnLink.click();
         logger.info("Clicked on Sign on Link");
+        return new LoginPage();
+    }
+
+
+    public FishListPage clickOnFishCategoryLink() {
+        WaitForElement.waitUntilElementIsClickable(fishCategoryLink);
+        fishCategoryLink.click();
+        logger.info("Clicked on Fish Category Link");
+        return new FishListPage();
     }
 }
 

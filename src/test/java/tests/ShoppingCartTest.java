@@ -1,32 +1,26 @@
 package tests;
 
 import org.testng.annotations.Test;
-import page.objects.*;
+import page.objects.LandingPage;
+import page.objects.LoginPage;
 
-import static org.testng.Assert.assertEquals;
 
 public class ShoppingCartTest extends TestBase {
 
     @Test
     public void asNotLoggedInUserIShallNotProceedToCheckout() {
+
         LandingPage landingPage = new LandingPage();
-        landingPage.clickOnEnterStoreLink();
+        landingPage
+                .clickOnEnterStoreLink()
+                .clickOnFishCategoryLink()
+                .clickOnAngelFishProductsLink()
+                .clickOnAddToCartSmallAngelfish()
+                .clickOnProceedToCheckout();
 
         LoginPage loginPage = new LoginPage();
-        loginPage.clickOnFishImageButton();
+        //loginPage.assertThatWarningIsDisplayed("You must sign on before attempting to check out. Please sign on and try checking out again.");
 
-        FishListPage fishListPage = new FishListPage();
-        fishListPage.clickOnAngelfishId();
-
-        AngelfishListPage angelfishListPage = new AngelfishListPage();
-        angelfishListPage.clickOnAddToCartSmallAngelfish();
-
-        ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
-        shoppingCartPage.clickOnProceedToCheckout();
-
-        loginPage = new LoginPage();
-        String warningMessage = loginPage.getWarningMessage();
-        assertEquals(warningMessage, "You must sign on before attempting to check out. Please sign on and try checking out again.");
     }
 
 }
