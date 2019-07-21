@@ -3,6 +3,7 @@ package driver.manager;
 import configuration.LocalWebDriverProperties;
 import driver.BrowserFactory;
 import driver.BrowserType;
+import driver.listeners.WebDriverEventListenerRegistrar;
 import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
@@ -17,6 +18,8 @@ public class DriverManager {
         if (driver == null) {
             driver = BrowserFactory.getBrowser(LocalWebDriverProperties.getLocalBrowser());
         }
+
+        driver = WebDriverEventListenerRegistrar.registerWebDriverEventListener(driver);
 
         return driver;
     }
