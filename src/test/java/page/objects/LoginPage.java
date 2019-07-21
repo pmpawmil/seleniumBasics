@@ -54,6 +54,4 @@ public class LoginPage {
         logger.info("Returned warning message was: {}", warningText);
         return warningText;
     }
-
-
 }
