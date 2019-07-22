@@ -41,4 +41,5 @@ public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElemen
         logger.info("WebElement had expected text!");
         return this;
     }
+
 }

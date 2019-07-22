@@ -17,4 +17,5 @@ public class AngelfishListPage extends BasePage {
         log().info("Clicked on Small Angelfish add to cart button");
         return new ShoppingCartPage();
     }
+
 }

@@ -51,4 +51,5 @@ public class LoginPage extends BasePage {
         AssertWebElement.assertThat(messageLabel).isDisplayed().hasText(warningMessage);
         return this;
     }
+
 }

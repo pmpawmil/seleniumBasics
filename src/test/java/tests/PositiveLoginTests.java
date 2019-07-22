@@ -23,4 +23,5 @@ public class PositiveLoginTests extends TestBase {
                 .clickOnLoginButton()
                 .assertThatDogBannerIsDisplayed();
     }
+
 }

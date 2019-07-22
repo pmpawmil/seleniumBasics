@@ -24,4 +24,5 @@ public class FailedLoginTests extends TestBase {
 
         loginPage.assertThatWarningIsDisplayed("Invalid username or password. Signon failed.");
     }
+
 }

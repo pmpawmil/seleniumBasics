@@ -17,18 +17,18 @@ public class DriverManager {
 
         if (driver == null) {
             driver = BrowserFactory.getBrowser(LocalWebDriverProperties.getLocalBrowser());
+            driver = WebDriverEventListenerRegistrar.registerWebDriverEventListener(driver);
         }
-
-        driver = WebDriverEventListenerRegistrar.registerWebDriverEventListener(driver);
 
         return driver;
     }
 
     public static void disposeDriver() {
         driver.close();
-        if (!LocalWebDriverProperties.getLocalBrowser().equals(BrowserType.FIREFOX)){
+        if (!LocalWebDriverProperties.getLocalBrowser().equals(BrowserType.FIREFOX)) {
             driver.quit();
         }
         driver = null;
     }
+
 }

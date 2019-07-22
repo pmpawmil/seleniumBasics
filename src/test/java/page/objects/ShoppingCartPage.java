@@ -15,4 +15,5 @@ public class ShoppingCartPage extends BasePage {
         log().info("Clicked on Proceed to checkout Button");
         return new CheckoutPage();
     }
+
 }

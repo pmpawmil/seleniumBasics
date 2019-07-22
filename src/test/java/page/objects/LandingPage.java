@@ -17,4 +17,5 @@ public class LandingPage extends BasePage {
         log().info("Clicked on Enter Store link");
         return new TopMenuPage();
     }
+
 }

@@ -42,6 +42,7 @@ public class DriverEventListener implements WebDriverEventListener {
     @Override
     public void afterNavigateTo(String url, WebDriver driver) {
         logger.info("Navigated to " + url);
+        String string = "";
     }
 
     @Override
@@ -156,4 +157,5 @@ public class DriverEventListener implements WebDriverEventListener {
     public void afterGetText(WebElement webElement, WebDriver webDriver, String s) {
         logger.info("Taken text of WebElement. Text wast " + s);
     }
+
 }

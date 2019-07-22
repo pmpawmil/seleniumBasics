@@ -16,4 +16,5 @@ public abstract class BasePage {
     protected Logger log() {
         return logger;
     }
+
 }

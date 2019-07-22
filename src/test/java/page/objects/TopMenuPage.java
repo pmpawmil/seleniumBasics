@@ -14,7 +14,7 @@ public class TopMenuPage extends BasePage {
     private WebElement fishCategoryLink;
 
     @Step("Click on Sign In Link")
-    public LoginPage clickOnSignInLink(){
+    public LoginPage clickOnSignInLink() {
         WaitForElement.waitUntilElementIsClickable(signOnLink);
         signOnLink.click();
         log().info("Clicked on Sign on Link");
@@ -28,5 +28,6 @@ public class TopMenuPage extends BasePage {
         log().info("Clicked on Fish Category Link");
         return new FishListPage();
     }
+
 }
 

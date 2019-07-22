@@ -19,4 +19,5 @@ public class LocalWebDriverProperties {
     public static String getInternetExplorerWebDriverLocation() {
         return ConfigurationProperties.getProperties().getProperty("ie.driver.location");
     }
+
 }

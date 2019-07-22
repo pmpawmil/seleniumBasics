@@ -27,4 +27,5 @@ public class ShoppingCartTest extends TestBase {
                 "Please sign on and try checking out again.");
 
     }
+
 }

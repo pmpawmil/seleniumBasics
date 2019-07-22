@@ -15,4 +15,5 @@ public class FishListPage extends BasePage {
         log().info("Clicked on Angelfish Link");
         return new AngelfishListPage();
     }
+
 }

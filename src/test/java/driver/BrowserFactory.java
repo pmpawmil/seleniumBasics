@@ -23,4 +23,5 @@ public class BrowserFactory {
                 throw new IllegalStateException("Unknown browser type! Please check your configuration");
         }
     }
+
 }

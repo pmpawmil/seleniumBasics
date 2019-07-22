@@ -20,4 +20,5 @@ public class FooterPage extends BasePage {
         assertThat(bannerAfterLoginLogo).isDisplayed();
         return this;
     }
+
 }

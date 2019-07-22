@@ -19,4 +19,5 @@ public class ConfigurationProperties {
         }
         return properties;
     }
+
 }

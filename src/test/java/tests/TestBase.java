@@ -22,7 +22,7 @@ public class TestBase {
         ConfigurationProperties.setProperties(propertiesFromFile);
     }
 
-    @Step("Setting up browser to: {browser} and navigating to Home Page")
+    @Step("Setting up browser")
     @Parameters("browser")
     @BeforeMethod
     public void beforeTest() {
